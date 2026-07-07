@@ -33,6 +33,8 @@
     "package:plugin": "node scripts/package-plugin.mjs",
     "release:check": "node scripts/release-check.mjs",
     "compile:adapters": "node scripts/compile-adapters.mjs",
+    "release": "node scripts/release.mjs",
+    "release:dry-run": "node scripts/release.mjs --dry-run",
     "pack": "npm pack --dry-run"
   },
   "keywords": [

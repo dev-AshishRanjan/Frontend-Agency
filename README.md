@@ -289,9 +289,47 @@ npm run package:plugin
 # Run the full pre-release gate (validate + eval + package + checks)
 npm run release:check
 
+# Preview a release without pushing anything
+npm run release:dry-run
+
+# Tag and push a release (triggers GitHub Actions to create the GitHub Release)
+npm run release
+
 # Verify npm tarball contents before publishing
 npm run pack
 ```
+
+---
+
+## Publishing a Release
+
+The release process is fully scripted. No manual GitHub Release creation needed.
+
+### Steps
+
+1. **Bump the version** in `package.json` (follow semver: patch/minor/major)
+2. **Add a CHANGELOG entry** under `## <version>` — the release body is extracted from here automatically
+3. **Commit and push** to `main`
+4. **Dry-run first** to validate everything:
+   ```bash
+   npm run release:dry-run
+   ```
+5. **Release** — tags, pushes, and triggers GitHub Actions:
+   ```bash
+   npm run release
+   ```
+6. GitHub Actions runs the full validation suite, packages the plugin, and publishes the **GitHub Release** with the plugin ZIP attached
+7. **Publish to npm** once the GitHub Release is live:
+   ```bash
+   npm publish
+   ```
+
+### What Gets Published
+
+| Artifact | Where |
+|----------|-------|
+| **GitHub Release** | `github.com/dev-AshishRanjan/Frontend-Agency/releases` — plugin ZIP with SHA-256 manifest |
+| **npm package** | `npmjs.com/package/frontend-agency` — `bin/install.mjs`, `CLAUDE.md`, `.claude/`, `plugins/` |
 
 ---
 

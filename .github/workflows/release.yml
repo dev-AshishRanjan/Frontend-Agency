@@ -1,0 +1,89 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      # ── Full validation suite ────────────────────────────────────────────────
+
+      - name: Compile adapter assets
+        run: node scripts/compile-adapters.mjs
+
+      - name: Repository validation
+        run: node scripts/validate-repo.mjs
+
+      - name: Skill evals
+        run: node scripts/run-skill-evals.mjs
+
+      # ── Package plugin with SHA-256 integrity manifest ────────────────────────
+
+      - name: Package plugin
+        run: node scripts/package-plugin.mjs
+
+      # ── Build release ZIP assets ──────────────────────────────────────────────
+
+      - name: Build release ZIP
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          cd dist
+          zip -r "../frontend-agency-core-${VERSION}.zip" "frontend-agency-core-${VERSION}/"
+          echo "RELEASE_ZIP=frontend-agency-core-${VERSION}.zip" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=${VERSION}" >> $GITHUB_ENV
+
+      # ── Extract changelog entry for release body ──────────────────────────────
+
+      - name: Extract changelog entry
+        id: changelog
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          node - <<'EOF'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          const version = process.env.VERSION;
+          const changelog = readFileSync('CHANGELOG.md', 'utf8');
+          const header = `## ${version}`;
+          const start = changelog.indexOf(header);
+          if (start === -1) {
+            writeFileSync('release_notes.md', `Release ${version}`);
+            process.exit(0);
+          }
+          const after = changelog.slice(start + header.length);
+          const next = after.search(/\n## /);
+          const body = (next === -1 ? after : after.slice(0, next)).trim();
+          writeFileSync('release_notes.md', body || `Release ${version}`);
+          EOF
+        env:
+          VERSION: ${{ env.RELEASE_VERSION }}
+
+      # ── Create GitHub Release ─────────────────────────────────────────────────
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "v${{ env.RELEASE_VERSION }}"
+          tag_name: ${{ github.ref_name }}
+          body_path: release_notes.md
+          draft: false
+          prerelease: false
+          files: |
+            ${{ env.RELEASE_ZIP }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
