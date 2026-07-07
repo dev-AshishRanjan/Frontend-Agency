@@ -1,0 +1,11 @@
+{
+  "skill": "creative-direction",
+  "intent": "Validate that creative direction creates a distinct concept, narrative, art direction, and experience principles before visual production.",
+  "trigger_terms": ["creative concept", "narrative direction", "art direction"],
+  "expected_sections": ["Creative concept", "Narrative arc", "Art direction"],
+  "rejection_patterns": ["copy awwwards", "make it nice"],
+  "sample_requests": [
+    "Define a distinctive creative concept for a founder-led AI security landing page.",
+    "Turn this brand discovery into art direction and experience principles."
+  ]
+}

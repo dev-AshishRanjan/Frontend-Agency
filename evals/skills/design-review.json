@@ -1,0 +1,11 @@
+{
+  "skill": "design-review",
+  "intent": "Validate that design review provides final agency-grade critique across brand, hierarchy, typography, layout, motion, accessibility, performance, SEO, and code quality.",
+  "trigger_terms": ["final agency-grade critique", "typography", "code quality"],
+  "expected_sections": ["Findings ordered by severity", "Required fixes", "Remaining risks"],
+  "rejection_patterns": ["rubber stamp", "all good"],
+  "sample_requests": [
+    "Run a final design review and score this landing page before launch.",
+    "Critique this frontend across visual quality, accessibility, performance, SEO, and code maintainability."
+  ]
+}

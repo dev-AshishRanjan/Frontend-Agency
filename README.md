@@ -45,6 +45,12 @@ Run the repository validation:
 npm run validate
 ```
 
+Run the skill eval suite:
+
+```bash
+npm run eval:skills
+```
+
 Run the plugin validator:
 
 ```bash
@@ -56,3 +62,23 @@ Run skill validation for a specific skill:
 ```bash
 python C:\Users\ASUS\.codex\skills\.system\skill-creator\scripts\quick_validate.py plugins\frontend-agency-core\skills\brand-discovery
 ```
+
+## Current Core Skills
+
+- `brand-discovery`
+- `creative-direction`
+- `visual-language`
+- `design-system`
+- `landing-page-strategy`
+- `frontend-architecture`
+- `motion-design`
+- `accessibility-review`
+- `performance-seo-review`
+- `visual-qa`
+- `design-review`
+
+## Distribution Model
+
+The repo-local marketplace lives at `.agents/plugins/marketplace.json`. The core plugin lives at `plugins/frontend-agency-core` and exposes skills from `./skills/`.
+
+Claude Code is the primary runtime target. The skills themselves remain standard Agent Skills so other compatible agents can consume them without depending on Claude-specific packaging.

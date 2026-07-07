@@ -1,0 +1,11 @@
+{
+  "skill": "motion-design",
+  "intent": "Validate that motion design defines purposeful animation, transitions, scroll behavior, microinteractions, and reduced-motion handling.",
+  "trigger_terms": ["animation", "transitions", "microinteractions"],
+  "expected_sections": ["Motion principles", "Timing and easing rules", "Reduced-motion plan"],
+  "rejection_patterns": ["animate everything", "constant movement"],
+  "sample_requests": [
+    "Define a tasteful motion system for our premium SaaS homepage.",
+    "Plan scroll behavior, transitions, and reduced-motion handling for this page."
+  ]
+}

@@ -15,6 +15,11 @@ const requiredSkills = [
   "visual-qa",
   "design-review"
 ];
+const requiredDocs = [
+  "docs/distribution.md",
+  "docs/release-checklist.md",
+  "docs/skill-authoring.md"
+];
 
 const failures = [];
 const unresolvedMarker = "[" + "TODO:";
@@ -68,9 +73,15 @@ if (marketplace) {
   assert(entry?.policy?.authentication === "ON_INSTALL", "marketplace authentication policy mismatch");
 }
 
+for (const docPath of requiredDocs) {
+  assert(fs.existsSync(path.join(root, docPath)), `${docPath} is missing`);
+}
+
 for (const skill of requiredSkills) {
   const skillPath = `plugins/frontend-agency-core/skills/${skill}/SKILL.md`;
+  const evalPath = `evals/skills/${skill}.json`;
   assert(fs.existsSync(path.join(root, skillPath)), `${skillPath} is missing`);
+  assert(fs.existsSync(path.join(root, evalPath)), `${evalPath} is missing`);
   if (!fs.existsSync(path.join(root, skillPath))) continue;
 
   const content = readText(skillPath);
@@ -79,6 +90,8 @@ for (const skill of requiredSkills) {
   assert(/description:\s*".{80,}"/.test(content), `${skill}: description must be quoted and specific`);
   assert(!content.includes(unresolvedMarker), `${skill}: unresolved placeholder marker`);
   assert(content.includes("## Workflow"), `${skill}: missing Workflow section`);
+  assert(content.includes("## Output"), `${skill}: missing Output section`);
+  assert(content.includes("## References"), `${skill}: missing References section`);
 }
 
 const textFiles = walkFiles(root).filter((filePath) =>

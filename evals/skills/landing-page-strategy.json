@@ -1,0 +1,11 @@
+{
+  "skill": "landing-page-strategy",
+  "intent": "Validate that landing page strategy plans messaging hierarchy, conversion flow, proof, objections, and calls to action.",
+  "trigger_terms": ["landing pages", "messaging hierarchy", "conversion flow"],
+  "expected_sections": ["Page objective", "Messaging hierarchy", "Section sequence"],
+  "rejection_patterns": ["generic hero", "template sections"],
+  "sample_requests": [
+    "Plan the messaging hierarchy and section sequence for our B2B launch page.",
+    "Create a conversion-focused landing page strategy for an enterprise design product."
+  ]
+}

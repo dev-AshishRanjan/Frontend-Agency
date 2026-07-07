@@ -1,0 +1,11 @@
+{
+  "skill": "brand-discovery",
+  "intent": "Validate that brand discovery turns unclear frontend briefs into decision-ready brand, audience, positioning, and constraint context.",
+  "trigger_terms": ["brand", "audience", "positioning"],
+  "expected_sections": ["Brand summary", "Audience segments", "Positioning hypothesis"],
+  "rejection_patterns": ["final code", "pixel-perfect"],
+  "sample_requests": [
+    "Use Frontend Agency to clarify the brand and audience before building our SaaS homepage.",
+    "Create a discovery brief for a premium analytics product with unclear positioning."
+  ]
+}

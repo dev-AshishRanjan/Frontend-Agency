@@ -5,7 +5,8 @@
   "description": "Professional Agent Skills and Claude Code plugin marketplace for premium frontend delivery.",
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-repo.mjs"
+    "validate": "node scripts/validate-repo.mjs",
+    "eval:skills": "node scripts/run-skill-evals.mjs"
   },
   "keywords": [
     "agent-skills",

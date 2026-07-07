@@ -1,0 +1,11 @@
+{
+  "skill": "performance-seo-review",
+  "intent": "Validate that performance and SEO review audits Core Web Vitals, bundle risk, images, rendering, metadata, crawlability, and structured data.",
+  "trigger_terms": ["performance", "Core Web Vitals", "SEO"],
+  "expected_sections": ["Performance blockers", "SEO blockers", "Verification steps"],
+  "rejection_patterns": ["client-only marketing", "unoptimized images"],
+  "sample_requests": [
+    "Audit this public landing page for performance and SEO readiness.",
+    "Review metadata, crawlability, image delivery, and Core Web Vitals risks."
+  ]
+}

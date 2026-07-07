@@ -1,0 +1,11 @@
+{
+  "skill": "design-system",
+  "intent": "Validate that design system guidance converts visual direction into scalable tokens, component rules, states, and implementation notes.",
+  "trigger_terms": ["design tokens", "component rules", "implementation guidance"],
+  "expected_sections": ["Token map", "Component inventory", "State model"],
+  "rejection_patterns": ["inline everything", "one-off styles"],
+  "sample_requests": [
+    "Create design tokens and component state rules for this marketing site.",
+    "Turn our visual language into a reusable frontend design system."
+  ]
+}

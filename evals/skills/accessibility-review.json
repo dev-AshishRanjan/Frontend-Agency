@@ -1,0 +1,11 @@
+{
+  "skill": "accessibility-review",
+  "intent": "Validate that accessibility review audits semantics, labels, keyboard navigation, focus management, contrast, ARIA, forms, media, and motion.",
+  "trigger_terms": ["accessibility", "keyboard navigation", "contrast"],
+  "expected_sections": ["Critical blockers", "Major issues", "Verification commands"],
+  "rejection_patterns": ["aria everywhere", "visual only"],
+  "sample_requests": [
+    "Audit this React page for accessibility issues before release.",
+    "Review forms, focus states, contrast, and keyboard navigation."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "skill": "frontend-architecture",
+  "intent": "Validate that frontend architecture plans scalable implementation across components, routing, styling, state, assets, accessibility, SEO, and performance.",
+  "trigger_terms": ["frontend implementation", "component architecture", "routing"],
+  "expected_sections": ["Architecture summary", "File and component plan", "Test and validation plan"],
+  "rejection_patterns": ["rewrite everything", "ignore existing"],
+  "sample_requests": [
+    "Plan the frontend architecture for implementing this new landing page in our Next.js app.",
+    "Review the component boundaries and routing plan before coding."
+  ]
+}

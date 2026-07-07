@@ -1,0 +1,11 @@
+{
+  "skill": "visual-qa",
+  "intent": "Validate that visual QA inspects screenshots and browser renders for responsive defects, spacing, alignment, overlap, hierarchy, and polish.",
+  "trigger_terms": ["screenshots", "responsive states", "visual hierarchy"],
+  "expected_sections": ["Blocking visual defects", "Responsive defects", "Viewports checked"],
+  "rejection_patterns": ["looks fine", "ship anyway"],
+  "sample_requests": [
+    "Inspect these desktop and mobile screenshots for visual QA defects.",
+    "Check spacing, alignment, text fit, and responsive polish before delivery."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "skill": "visual-language",
+  "intent": "Validate that visual language produces typography, color, layout, spacing, imagery, and hierarchy rules for frontend execution.",
+  "trigger_terms": ["typography", "color", "layout"],
+  "expected_sections": ["Typography system", "Color system", "Layout and spacing"],
+  "rejection_patterns": ["random palette", "stock template"],
+  "sample_requests": [
+    "Define the visual language for a premium developer tools homepage.",
+    "Create typography, color, spacing, and imagery rules from this creative direction."
+  ]
+}
