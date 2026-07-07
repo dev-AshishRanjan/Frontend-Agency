@@ -1,6 +1,7 @@
-# Skill: frontend-architecture
-
-> Use to plan scalable frontend implementation, component architecture, routing, styling, state, data, assets, accessibility, SEO, and performance.
+---
+name: frontend-architecture
+description: "Use to plan scalable frontend implementation, component architecture, routing, styling, state, data, assets, accessibility, SEO, and performance."
+---
 
 # Frontend Architecture
 

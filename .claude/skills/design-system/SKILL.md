@@ -1,6 +1,7 @@
-# Skill: design-system
-
-> Use to translate brand and visual direction into scalable design tokens, component rules, states, patterns, and frontend implementation guidance.
+---
+name: design-system
+description: "Use to translate brand and visual direction into scalable design tokens, component rules, states, patterns, and frontend implementation guidance."
+---
 
 # Design System
 

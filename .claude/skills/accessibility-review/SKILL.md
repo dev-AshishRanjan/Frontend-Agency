@@ -1,6 +1,7 @@
-# Skill: accessibility-review
-
-> Use to audit frontend accessibility, including semantics, labels, keyboard navigation, focus management, contrast, ARIA, forms, media, and motion.
+---
+name: accessibility-review
+description: "Use to audit frontend accessibility, including semantics, labels, keyboard navigation, focus management, contrast, ARIA, forms, media, and motion."
+---
 
 # Accessibility Review
 

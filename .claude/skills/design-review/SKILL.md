@@ -1,6 +1,7 @@
-# Skill: design-review
-
-> Use for final agency-grade critique of frontend work across brand fit, hierarchy, typography, layout, motion, accessibility, performance, SEO, and code quality.
+---
+name: design-review
+description: "Use for final agency-grade critique of frontend work across brand fit, hierarchy, typography, layout, motion, accessibility, performance, SEO, and code quality."
+---
 
 # Design Review
 

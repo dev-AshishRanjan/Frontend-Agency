@@ -1,6 +1,7 @@
-# Skill: landing-page-strategy
-
-> Use to plan landing pages, marketing pages, section order, messaging hierarchy, conversion flow, proof, objections, and calls to action.
+---
+name: landing-page-strategy
+description: "Use to plan landing pages, marketing pages, section order, messaging hierarchy, conversion flow, proof, objections, and calls to action."
+---
 
 # Landing Page Strategy
 

@@ -1,6 +1,7 @@
-# Skill: motion-design
-
-> Use to define animation, transitions, scroll behavior, microinteractions, reduced-motion handling, and motion implementation rules for frontend work.
+---
+name: motion-design
+description: "Use to define animation, transitions, scroll behavior, microinteractions, reduced-motion handling, and motion implementation rules for frontend work."
+---
 
 # Motion Design
 

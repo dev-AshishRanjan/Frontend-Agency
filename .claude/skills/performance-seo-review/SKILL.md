@@ -1,6 +1,7 @@
-# Skill: performance-seo-review
-
-> Use to audit frontend performance, Core Web Vitals, bundle risk, image delivery, rendering mode, metadata, crawlability, structured data, and SEO readiness.
+---
+name: performance-seo-review
+description: "Use to audit frontend performance, Core Web Vitals, bundle risk, image delivery, rendering mode, metadata, crawlability, structured data, and SEO readiness."
+---
 
 # Performance SEO Review
 

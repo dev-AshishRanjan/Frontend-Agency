@@ -1,6 +1,7 @@
-# Skill: creative-direction
-
-> Use to create a distinctive creative concept, narrative direction, art direction, and experience principles before visual design or frontend implementation.
+---
+name: creative-direction
+description: "Use to create a distinctive creative concept, narrative direction, art direction, and experience principles before visual design or frontend implementation."
+---
 
 # Creative Direction
 

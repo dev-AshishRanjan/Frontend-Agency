@@ -1,6 +1,7 @@
-# Skill: visual-qa
-
-> Use to inspect screenshots, browser renders, responsive states, spacing, alignment, overlap, text fit, visual hierarchy, and production polish.
+---
+name: visual-qa
+description: "Use to inspect screenshots, browser renders, responsive states, spacing, alignment, overlap, text fit, visual hierarchy, and production polish."
+---
 
 # Visual QA
 

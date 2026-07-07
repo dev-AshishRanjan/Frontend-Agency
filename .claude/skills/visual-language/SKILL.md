@@ -1,6 +1,7 @@
-# Skill: visual-language
-
-> Use to define typography, color, layout, spacing, imagery, iconography, depth, and visual hierarchy for premium frontend experiences.
+---
+name: visual-language
+description: "Use to define typography, color, layout, spacing, imagery, iconography, depth, and visual hierarchy for premium frontend experiences."
+---
 
 # Visual Language
 

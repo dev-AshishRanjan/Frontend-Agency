@@ -77,9 +77,11 @@ for (const skillName of skillDirs) {
     }
   }
 
-  // Build the compiled skill content
-  let compiledContent = `# Skill: ${metadata.name || skillName}\n\n`;
-  compiledContent += `> ${metadata.description || ""}\n\n`;
+  // Build the compiled skill content with YAML frontmatter for agent compatibility
+  let compiledContent = `---\n`;
+  compiledContent += `name: ${metadata.name || skillName}\n`;
+  compiledContent += `description: ${JSON.stringify(metadata.description || "")}\n`;
+  compiledContent += `---\n\n`;
   compiledContent += resolvedBody.trim() + "\n\n";
   
   if (references.length > 0) {

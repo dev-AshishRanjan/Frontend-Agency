@@ -1,6 +1,7 @@
-# Skill: brand-discovery
-
-> Use for brand, audience, product, offer, positioning, constraints, and success-metric discovery before frontend strategy, design, copy, or implementation work.
+---
+name: brand-discovery
+description: "Use for brand, audience, product, offer, positioning, constraints, and success-metric discovery before frontend strategy, design, copy, or implementation work."
+---
 
 # Brand Discovery
 
