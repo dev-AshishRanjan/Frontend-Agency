@@ -28,4 +28,5 @@ Lead with findings ordered by severity:
 ## References
 
 - Read `../../references/frontend-standards.md` for performance and SEO standards.
+- Read `../../references/review-playbook.md` when writing findings and verification steps.
 - Read `../../references/review-gates.md` before marking work ready.

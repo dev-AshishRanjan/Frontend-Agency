@@ -34,4 +34,5 @@ Avoid borrowed aesthetics unless the user asks for a reference. If a reference i
 ## References
 
 - Read `../../references/agency-standards.md` for quality gates.
+- Read `../../references/creative-direction-playbook.md` when the project needs a distinctive concept or art direction.
 - Read `../../references/workflow.md` when coordinating with other Frontend Agency skills.

@@ -30,4 +30,5 @@ Return:
 ## References
 
 - Read `../../references/frontend-standards.md` for performance and reduced-motion rules.
+- Read `../../references/motion-playbook.md` when defining timing, choreography, scroll behavior, or interaction feedback.
 - Read `../../references/review-gates.md` when motion affects delivery readiness.

@@ -33,5 +33,6 @@ Do not approve generic, inaccessible, slow, unstable, or visually broken work. I
 ## References
 
 - Read `../../references/quality-rubric.md` when scoring.
+- Read `../../references/review-playbook.md` when writing final critique and required fixes.
 - Read `../../references/review-gates.md` before final approval.
 - Read `../../references/frontend-standards.md` when implementation quality is in scope.

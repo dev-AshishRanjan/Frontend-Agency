@@ -29,5 +29,6 @@ Return:
 
 ## References
 
+- Read `../../references/frontend-architecture-playbook.md` when planning project structure, components, routing, rendering, or validation.
 - Read `../../references/frontend-standards.md` for engineering standards.
 - Read `../../references/review-gates.md` before finalizing implementation plans.

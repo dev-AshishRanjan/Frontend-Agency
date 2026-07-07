@@ -34,4 +34,5 @@ Avoid one-note palettes, unreadable contrast, oversized type in dense interfaces
 ## References
 
 - Read `../../references/agency-standards.md` before broad design recommendations.
+- Read `../../references/visual-language-playbook.md` when defining typography, color, layout, spacing, and imagery.
 - Read `../../references/review-gates.md` when the output will guide implementation.

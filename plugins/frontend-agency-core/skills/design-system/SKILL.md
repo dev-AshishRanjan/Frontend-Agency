@@ -29,5 +29,6 @@ Return:
 
 ## References
 
+- Read `../../references/design-system-playbook.md` when defining tokens, components, states, or variants.
 - Read `../../references/frontend-standards.md` for implementation constraints.
 - Read `../../references/review-gates.md` before declaring a system production-ready.

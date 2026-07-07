@@ -28,5 +28,6 @@ Lead with findings ordered by severity:
 
 ## References
 
+- Read `../../references/review-playbook.md` when writing visual findings and verification steps.
 - Read `../../references/review-gates.md` for delivery criteria.
 - Read `../../references/quality-rubric.md` when a numeric quality score is requested.

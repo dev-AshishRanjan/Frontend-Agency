@@ -30,4 +30,5 @@ Return:
 ## References
 
 - Read `../../references/agency-standards.md` when the request is broad or greenfield.
+- Read `../../references/brand-discovery-playbook.md` when the brief lacks audience, positioning, proof, or constraints.
 - Read `../../references/workflow.md` when this discovery will feed a complete frontend build.

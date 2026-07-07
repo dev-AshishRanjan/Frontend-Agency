@@ -35,4 +35,5 @@ Do not default to hero, feature cards, testimonials, pricing, FAQ unless that se
 ## References
 
 - Read `../../references/agency-standards.md` for delivery gates.
+- Read `../../references/landing-page-playbook.md` when sequencing sections or planning conversion flow.
 - Read `../../references/frontend-standards.md` when producing implementation handoff notes.
