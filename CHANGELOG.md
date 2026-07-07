@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.3 - 2026-07-07
+
+### Added
+
+- `workflow_dispatch` manual trigger in release workflow to support UI-triggered actions.
+
+### Changed
+
+- Refactored Claude Code integration from legacy commands (`.claude/commands/`) to native **Agent Skills** (`.claude/skills/`). This allows Claude Code to automatically invoke skills based on trigger context without manual user slash command execution.
+- Restructured `bin/install.mjs` to copy compiled Agent Skills folders recursively.
+- Robustified GitHub Actions release workflow `Build release ZIP` step to dynamically discover the packaged directory name inside `dist/`, avoiding failures on mismatching triggers.
+- Updated documentation (README, INSTALL, CONTRIBUTING, .gitignore) to reference Agent Skills directories.
+
 ## 1.0.0 - 2026-07-07
 
 ### Added
