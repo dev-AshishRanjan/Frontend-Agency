@@ -25,7 +25,8 @@ const requiredDocs = [
 const requiredSchemas = [
   "packages/schemas/skill-eval.schema.json",
   "packages/schemas/marketplace.schema.json",
-  "packages/schemas/plugin-manifest.schema.json"
+  "packages/schemas/plugin-manifest.schema.json",
+  "packages/schemas/package-manifest.schema.json"
 ];
 
 const failures = [];

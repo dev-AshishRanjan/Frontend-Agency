@@ -12,3 +12,5 @@
 - Repository validation.
 - Skill eval quality gates.
 - Distribution, release, and skill-authoring documentation.
+- Skill playbook references.
+- Plugin packaging workflow with integrity manifest.

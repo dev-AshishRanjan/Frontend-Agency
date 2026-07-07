@@ -5,7 +5,8 @@ const root = process.cwd();
 const node = process.execPath;
 const checks = [
   ["Repository validation", node, ["scripts/validate-repo.mjs"]],
-  ["Skill evals", node, ["scripts/run-skill-evals.mjs"]]
+  ["Skill evals", node, ["scripts/run-skill-evals.mjs"]],
+  ["Plugin package", node, ["scripts/package-plugin.mjs"]]
 ];
 
 let failed = false;

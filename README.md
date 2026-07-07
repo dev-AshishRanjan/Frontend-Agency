@@ -51,6 +51,18 @@ Run the skill eval suite:
 npm run eval:skills
 ```
 
+Build a distributable plugin package:
+
+```bash
+npm run package:plugin
+```
+
+Run the release gate:
+
+```bash
+npm run release:check
+```
+
 Run the plugin validator:
 
 ```bash

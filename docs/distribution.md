@@ -52,3 +52,29 @@ Use semantic versions in plugin manifests:
 - Patch: wording, examples, metadata, non-breaking eval improvements
 - Minor: new skills, new references, new validation gates
 - Major: renamed skills, removed skills, changed output contracts
+
+## Packaging
+
+Create a distributable package:
+
+```bash
+npm run package:plugin
+```
+
+The package is written to:
+
+```text
+dist/frontend-agency-core-<version>
+```
+
+The package contains:
+
+- `.agents/plugins/marketplace.json`
+- `plugins/frontend-agency-core`
+- `package-manifest.json` with SHA-256 hashes for packaged files
+
+Run this before publishing:
+
+```bash
+npm run release:check
+```

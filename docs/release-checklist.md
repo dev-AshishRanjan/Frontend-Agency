@@ -5,6 +5,8 @@
 - Confirm all intended changes are committed by phase.
 - Run `npm run validate`.
 - Run `npm run eval:skills`.
+- Run `npm run package:plugin`.
+- Run `npm run release:check`.
 - Run the official plugin validator.
 - Run the official skill validator for every skill.
 - Check that local research artifacts are not staged.
