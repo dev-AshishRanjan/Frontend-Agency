@@ -159,7 +159,7 @@ branch: skill/skill-name
 ├── Add SKILL.md
 ├── Add references/ (if needed)
 ├── Add evals/skills/skill-name.json
-├── Add .claude/commands/skill-name.md
+├── Add .claude/skills/skill-name/
 ├── Update validate-repo.mjs requiredSkills list
 ├── Update README.md skills list
 └── Update CHANGELOG.md

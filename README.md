@@ -57,7 +57,7 @@ cp -r .claude/ /path/to/your-project/
 
 # Global (your machine, all projects)
 cp CLAUDE.md ~/.claude/
-cp -r .claude/commands/* ~/.claude/commands/
+cp -r .claude/skills/* ~/.claude/skills/
 ```
 
 ### Cursor / Windsurf
@@ -198,19 +198,31 @@ frontend-agency/
 ├── LICENSE                              # MIT
 │
 ├── .claude/
-│   └── commands/                        # Claude Code slash commands (12 files)
-│       ├── brand-discovery.md           → /brand-discovery
-│       ├── creative-direction.md        → /creative-direction
-│       ├── visual-language.md           → /visual-language
-│       ├── design-system.md             → /design-system
-│       ├── landing-page-strategy.md     → /landing-page-strategy
-│       ├── frontend-architecture.md     → /frontend-architecture
-│       ├── motion-design.md             → /motion-design
-│       ├── accessibility-review.md      → /accessibility-review
-│       ├── performance-seo-review.md    → /performance-seo-review
-│       ├── visual-qa.md                 → /visual-qa
-│       ├── design-review.md             → /design-review
-│       └── full-build.md                → /full-build
+│   └── skills/                          # Claude Code Agent Skills (12 folders)
+│       ├── brand-discovery/
+│       │   └── SKILL.md                 → /brand-discovery or auto-invocation
+│       ├── creative-direction/
+│       │   └── SKILL.md                 → /creative-direction
+│       ├── visual-language/
+│       │   └── SKILL.md                 → /visual-language
+│       ├── design-system/
+│       │   └── SKILL.md                 → /design-system
+│       ├── landing-page-strategy/
+│       │   └── SKILL.md                 → /landing-page-strategy
+│       ├── frontend-architecture/
+│       │   └── SKILL.md                 → /frontend-architecture
+│       ├── motion-design/
+│       │   └── SKILL.md                 → /motion-design
+│       ├── accessibility-review/
+│       │   └── SKILL.md                 → /accessibility-review
+│       ├── performance-seo-review/
+│       │   └── SKILL.md                 → /performance-seo-review
+│       ├── visual-qa/
+│       │   └── SKILL.md                 → /visual-qa
+│       ├── design-review/
+│       │   └── SKILL.md                 → /design-review
+│       └── full-build/
+│           └── SKILL.md                 → /full-build or orchestration prompt
 │
 ├── bin/
 │   └── install.mjs                      # CLI installer (npx frontend-agency install)
@@ -337,7 +349,7 @@ The release process is fully scripted. No manual GitHub Release creation needed.
 
 | Agent | Integration Method | Status |
 |-------|-------------------|--------|
-| **Claude Code** | `CLAUDE.md` + `.claude/commands/` slash commands | ✅ First-class |
+| **Claude Code** | `CLAUDE.md` + `.claude/skills/` Agent Skills | ✅ First-class |
 | **Cursor** | `.cursorrules` workspace rules | ✅ Supported |
 | **Windsurf** | `.cursorrules` workspace rules | ✅ Supported |
 | **GitHub Copilot** | `.github/copilot-instructions.md` | ✅ Supported |
@@ -369,7 +381,7 @@ Skill entrypoints (`SKILL.md`) are intentionally concise — under 60 lines. Dee
 
 ### Adapters Are Build Artifacts
 
-Compiled adapters (`dist/`) are git-ignored. Users build them locally with `npm run compile:adapters`. This keeps the repository canonical and prevents stale compiled outputs from accumulating. The Claude integration files (`.claude/commands/`, `CLAUDE.md`) are an exception — they are committed because they must be version-controlled and shipped in the npm package.
+Compiled adapters (`dist/`) are git-ignored. Users build them locally with `npm run compile:adapters`. This keeps the repository canonical and prevents stale compiled outputs from accumulating. The Claude integration files (`.claude/skills/`, `CLAUDE.md`) are an exception — they are committed because they must be version-controlled and shipped in the npm package.
 
 ---
 

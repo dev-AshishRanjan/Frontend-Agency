@@ -130,7 +130,7 @@ const AGENTS = [
  */
 function installClaude(targetClaudeDir, scope) {
   const srcClaudeMd = path.join(PACKAGE_ROOT, 'CLAUDE.md');
-  const srcCommandsDir = path.join(PACKAGE_ROOT, '.claude', 'commands');
+  const srcSkillsDir = path.join(PACKAGE_ROOT, '.claude', 'skills');
 
   // For global: CLAUDE.md goes to ~/.claude/CLAUDE.md
   // For project: CLAUDE.md goes to ./CLAUDE.md (project root)
@@ -139,7 +139,7 @@ function installClaude(targetClaudeDir, scope) {
       ? path.join(os.homedir(), '.claude', 'CLAUDE.md')
       : path.join(process.cwd(), 'CLAUDE.md');
 
-  const destCommandsDir = path.join(targetClaudeDir, 'commands');
+  const destSkillsDir = path.join(targetClaudeDir, 'skills');
 
   if (!fs.existsSync(srcClaudeMd)) {
     err(`Source CLAUDE.md not found at: ${srcClaudeMd}`);
@@ -147,8 +147,8 @@ function installClaude(targetClaudeDir, scope) {
     process.exit(1);
   }
 
-  if (!fs.existsSync(srcCommandsDir)) {
-    err(`Source commands directory not found at: ${srcCommandsDir}`);
+  if (!fs.existsSync(srcSkillsDir)) {
+    err(`Source skills directory not found at: ${srcSkillsDir}`);
     process.exit(1);
   }
 
@@ -159,15 +159,11 @@ function installClaude(targetClaudeDir, scope) {
   // CLAUDE.md
   copyRecursive(srcClaudeMd, destClaudeMd, { overwrite: true });
 
-  // Slash commands
-  for (const entry of fs.readdirSync(srcCommandsDir)) {
-    const src = path.join(srcCommandsDir, entry);
-    const dest = path.join(destCommandsDir, entry);
-    copyRecursive(src, dest, { overwrite: true });
-  }
+  // Skills
+  copyRecursive(srcSkillsDir, destSkillsDir, { overwrite: true });
 
   console.log();
-  info(`Slash commands installed to: ${dim(destCommandsDir)}`);
+  info(`Agent skills installed to:   ${dim(destSkillsDir)}`);
   info(`CLAUDE.md installed to:      ${dim(destClaudeMd)}`);
 }
 
@@ -245,7 +241,8 @@ async function main() {
   }
 
   console.log();
-  info(`Type ${bold('/')} in Claude Code to see available skill commands.`);
+  info(`Type ${bold('/')} in Claude Code to see available skills (e.g. /brand-discovery).`);
+  info(`Claude Code will also automatically trigger these skills based on your prompts.`);
   info(`Run ${bold('/full-build')} to start an agency-grade frontend build.`);
   console.log();
 

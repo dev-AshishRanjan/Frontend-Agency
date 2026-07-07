@@ -19,7 +19,7 @@ npx frontend-agency install
 The installer will:
 - Detect whether to install to the current project (`.claude/`) or globally (`~/.claude/`)
 - Write `CLAUDE.md` with full skill documentation
-- Write all skill slash commands to `.claude/commands/`
+- Write all Agent Skills to `.claude/skills/`
 - Confirm what was installed and where
 
 For global install (available in all your projects):
@@ -51,8 +51,8 @@ cp -r .claude/ /path/to/your-project/
 
 ```bash
 cp CLAUDE.md ~/.claude/
-mkdir -p ~/.claude/commands
-cp .claude/commands/* ~/.claude/commands/
+mkdir -p ~/.claude/skills
+cp -r .claude/skills/* ~/.claude/skills/
 ```
 
 ---

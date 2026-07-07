@@ -23,5 +23,5 @@ Chat History.txt
 Executive Summary.pdf
 
 # NOTE: .claude/ is intentionally NOT ignored.
-# .claude/commands/ contains slash commands that must be committed
+# .claude/skills/ contains Agent Skills that must be committed
 # so teams can share them via Git and the npm package ships them.

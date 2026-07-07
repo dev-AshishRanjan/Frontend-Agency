@@ -94,6 +94,11 @@ for (const skillName of skillDirs) {
   const outputSkillPath = path.join(distSkillsDir, `${skillName}.md`);
   fs.writeFileSync(outputSkillPath, compiledContent, "utf8");
 
+  // Output to the committed repository .claude/skills/ directory for native Claude Code invocation
+  const repoSkillDir = path.join(root, ".claude", "skills", skillName);
+  fs.mkdirSync(repoSkillDir, { recursive: true });
+  fs.writeFileSync(path.join(repoSkillDir, "SKILL.md"), compiledContent, "utf8");
+
   skillsData.push({
     name: skillName,
     displayName: metadata.name || skillName,
