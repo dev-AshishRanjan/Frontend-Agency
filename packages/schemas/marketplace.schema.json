@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frontend-agency.local/schemas/marketplace.schema.json",
+  "title": "Frontend Agency Marketplace",
+  "type": "object",
+  "required": ["name", "interface", "plugins"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "interface": {
+      "type": "object",
+      "required": ["displayName"],
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "source", "policy", "category"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "source": {
+            "type": "object",
+            "required": ["source", "path"],
+            "additionalProperties": false,
+            "properties": {
+              "source": {
+                "const": "local"
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^\\./plugins/[a-z0-9]+(?:-[a-z0-9]+)*$"
+              }
+            }
+          },
+          "policy": {
+            "type": "object",
+            "required": ["installation", "authentication"],
+            "additionalProperties": false,
+            "properties": {
+              "installation": {
+                "enum": ["NOT_AVAILABLE", "AVAILABLE", "INSTALLED_BY_DEFAULT"]
+              },
+              "authentication": {
+                "enum": ["ON_INSTALL", "ON_USE"]
+              }
+            }
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

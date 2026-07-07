@@ -16,9 +16,16 @@ const requiredSkills = [
   "design-review"
 ];
 const requiredDocs = [
+  "CHANGELOG.md",
   "docs/distribution.md",
+  "docs/agent-compatibility.md",
   "docs/release-checklist.md",
   "docs/skill-authoring.md"
+];
+const requiredSchemas = [
+  "packages/schemas/skill-eval.schema.json",
+  "packages/schemas/marketplace.schema.json",
+  "packages/schemas/plugin-manifest.schema.json"
 ];
 
 const failures = [];
@@ -75,6 +82,12 @@ if (marketplace) {
 
 for (const docPath of requiredDocs) {
   assert(fs.existsSync(path.join(root, docPath)), `${docPath} is missing`);
+}
+
+for (const schemaPath of requiredSchemas) {
+  const schema = readJson(schemaPath);
+  assert(schema?.$schema === "https://json-schema.org/draft/2020-12/schema", `${schemaPath}: missing JSON Schema draft declaration`);
+  assert(typeof schema?.title === "string" && schema.title.length > 0, `${schemaPath}: missing schema title`);
 }
 
 for (const skill of requiredSkills) {

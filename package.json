@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate-repo.mjs",
-    "eval:skills": "node scripts/run-skill-evals.mjs"
+    "eval:skills": "node scripts/run-skill-evals.mjs",
+    "release:check": "node scripts/release-check.mjs"
   },
   "keywords": [
     "agent-skills",
