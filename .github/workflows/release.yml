@@ -44,10 +44,11 @@ jobs:
 
       - name: Build release ZIP
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
           cd dist
-          zip -r "../frontend-agency-core-${VERSION}.zip" "frontend-agency-core-${VERSION}/"
-          echo "RELEASE_ZIP=frontend-agency-core-${VERSION}.zip" >> $GITHUB_ENV
+          DIR_NAME=$(ls -d frontend-agency-core-*/ | head -n 1 | sed 's/\///')
+          zip -r "../${DIR_NAME}.zip" "${DIR_NAME}/"
+          echo "RELEASE_ZIP=${DIR_NAME}.zip" >> $GITHUB_ENV
+          VERSION="${DIR_NAME##*-}"
           echo "RELEASE_VERSION=${VERSION}" >> $GITHUB_ENV
 
       # ── Extract changelog entry for release body ──────────────────────────────
