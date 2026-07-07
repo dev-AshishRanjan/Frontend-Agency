@@ -4,13 +4,13 @@
   "description": "Agency-grade frontend skills for AI agents. Plan, design, build, review, and harden premium frontend experiences.",
   "author": "Frontend Agency",
   "license": "MIT",
-  "homepage": "https://github.com/frontend-agency/frontend-agency#readme",
+  "homepage": "https://github.com/dev-AshishRanjan/Frontend-Agency#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontend-agency/frontend-agency.git"
+    "url": "git+https://github.com/dev-AshishRanjan/Frontend-Agency.git"
   },
   "bugs": {
-    "url": "https://github.com/frontend-agency/frontend-agency/issues"
+    "url": "https://github.com/dev-AshishRanjan/Frontend-Agency/issues"
   },
   "engines": {
     "node": ">=20"

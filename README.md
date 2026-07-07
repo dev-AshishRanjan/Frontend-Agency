@@ -1,6 +1,6 @@
 # Frontend Agency
 
-[![Validate](https://github.com/frontend-agency/frontend-agency/actions/workflows/validate.yml/badge.svg)](https://github.com/frontend-agency/frontend-agency/actions/workflows/validate.yml)
+[![Validate](https://github.com/dev-AshishRanjan/Frontend-Agency/actions/workflows/validate.yml/badge.svg)](https://github.com/dev-AshishRanjan/Frontend-Agency/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![npm](https://img.shields.io/npm/v/frontend-agency)](https://www.npmjs.com/package/frontend-agency)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](https://nodejs.org)
