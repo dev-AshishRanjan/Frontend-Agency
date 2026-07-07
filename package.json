@@ -1,0 +1,19 @@
+{
+  "name": "frontend-agency",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Professional Agent Skills and Claude Code plugin marketplace for premium frontend delivery.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-repo.mjs"
+  },
+  "keywords": [
+    "agent-skills",
+    "claude-code",
+    "frontend",
+    "design-systems",
+    "accessibility",
+    "performance"
+  ],
+  "license": "UNLICENSED"
+}

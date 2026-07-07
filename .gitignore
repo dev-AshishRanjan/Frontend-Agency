@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+tmp/
+
+*.log
+*.tmp
+
+# Local research inputs kept outside committed product artifacts.
+Chat History.txt
+Executive Summary.pdf
