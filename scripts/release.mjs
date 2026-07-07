@@ -47,7 +47,8 @@ const dim  = (s) => `${c.dim}${s}${c.reset}`;
 const sep  = () => console.log(dim('─'.repeat(60)));
 
 function run(cmd, { silent = false } = {}) {
-  return execSync(cmd, { cwd: repoRoot, encoding: 'utf8', stdio: silent ? 'pipe' : 'inherit' }).trim();
+  const result = execSync(cmd, { cwd: repoRoot, encoding: 'utf8', stdio: silent ? 'pipe' : 'inherit' });
+  return result ? result.trim() : '';
 }
 
 function runSilent(cmd) {
