@@ -5,9 +5,11 @@ const root = process.cwd();
 const skillsDir = path.join(root, "plugins", "frontend-agency-core", "skills");
 const distDir = path.join(root, "dist", "adapters");
 const distSkillsDir = path.join(distDir, "skills");
+const distGeminiDir = path.join(root, "dist", "gemini");
 
 // Ensure directories exist
 fs.mkdirSync(distSkillsDir, { recursive: true });
+fs.mkdirSync(distGeminiDir, { recursive: true });
 
 function parseFrontmatter(content) {
   if (!content.startsWith("---\n")) {
@@ -172,4 +174,27 @@ for (const s of skillsData) {
 }
 fs.writeFileSync(path.join(distDir, "copilot-instructions.md"), copilotInstructions, "utf8");
 
+// 6. Generate Gemini CLI skill directories (dist/gemini/<skill-name>/SKILL.md)
+// Gemini CLI reads skills from ~/.gemini/skills/<name>/SKILL.md
+// Each file is a compiled standalone skill with inlined references.
+for (const s of skillsData) {
+  const skillOutputDir = path.join(distGeminiDir, s.name);
+  fs.mkdirSync(skillOutputDir, { recursive: true });
+
+  // Gemini SKILL.md uses the same compiled format as standalone skills
+  // but with a Gemini-native frontmatter description field.
+  const geminiContent = [
+    `---`,
+    `name: ${s.name}`,
+    `description: ${JSON.stringify(s.description)}`,
+    `---`,
+    ``,
+    s.compiledContent.trim(),
+    ``,
+  ].join("\n");
+
+  fs.writeFileSync(path.join(skillOutputDir, "SKILL.md"), geminiContent, "utf8");
+}
+
 console.log(`Compilation complete. Generated ${skillsData.length} standalone skills and unified adapter assets.`);
+console.log(`Gemini CLI skills generated at: dist/gemini/`);

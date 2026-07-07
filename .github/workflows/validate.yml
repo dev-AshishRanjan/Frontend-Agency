@@ -8,7 +8,38 @@ on:
 
 jobs:
   validate:
+    name: Validate (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ["20", "22"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Compile adapter assets
+        run: node scripts/compile-adapters.mjs
+
+      - name: Repository validation
+        run: node scripts/validate-repo.mjs
+
+      - name: Skill evals
+        run: node scripts/run-skill-evals.mjs
+
+  release-gate:
+    name: Release Gate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: validate
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,9 +48,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
 
-      - name: Repository validation
-        run: node scripts/validate-repo.mjs
+      - name: Compile adapter assets
+        run: node scripts/compile-adapters.mjs
 
-      - name: Skill evals
-        run: node scripts/run-skill-evals.mjs
+      - name: Package plugin
+        run: node scripts/package-plugin.mjs
+
+      - name: Release check
+        run: node scripts/release-check.mjs

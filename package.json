@@ -1,15 +1,39 @@
 {
   "name": "frontend-agency",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Professional Agent Skills and Claude Code plugin marketplace for premium frontend delivery.",
+  "version": "1.0.0",
+  "description": "Agency-grade frontend skills for AI agents. Plan, design, build, review, and harden premium frontend experiences.",
+  "author": "Frontend Agency",
+  "license": "MIT",
+  "homepage": "https://github.com/frontend-agency/frontend-agency#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontend-agency/frontend-agency.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frontend-agency/frontend-agency/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "type": "module",
+  "bin": {
+    "frontend-agency": "bin/install.mjs"
+  },
+  "files": [
+    "bin/",
+    "CLAUDE.md",
+    ".claude/",
+    "plugins/",
+    "LICENSE",
+    "INSTALL.md"
+  ],
   "scripts": {
     "validate": "node scripts/validate-repo.mjs",
     "eval:skills": "node scripts/run-skill-evals.mjs",
     "package:plugin": "node scripts/package-plugin.mjs",
     "release:check": "node scripts/release-check.mjs",
-    "compile:adapters": "node scripts/compile-adapters.mjs"
+    "compile:adapters": "node scripts/compile-adapters.mjs",
+    "pack": "npm pack --dry-run"
   },
   "keywords": [
     "agent-skills",
@@ -17,7 +41,10 @@
     "frontend",
     "design-systems",
     "accessibility",
-    "performance"
-  ],
-  "license": "UNLICENSED"
+    "performance",
+    "ai",
+    "skills",
+    "cursor",
+    "gemini"
+  ]
 }

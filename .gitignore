@@ -1,17 +1,27 @@
+# OS artifacts
 .DS_Store
 Thumbs.db
 
+# Build and dependency outputs
 node_modules/
-dist/
 build/
 coverage/
 .cache/
 .tmp/
 tmp/
 
+# Compiled adapter assets (generated via npm run compile:adapters)
+# Users run this themselves; it is not committed.
+dist/
+
+# Logs and temp files
 *.log
 *.tmp
 
-# Local research inputs kept outside committed product artifacts.
+# Local research inputs (not product artifacts)
 Chat History.txt
 Executive Summary.pdf
+
+# NOTE: .claude/ is intentionally NOT ignored.
+# .claude/commands/ contains slash commands that must be committed
+# so teams can share them via Git and the npm package ships them.
