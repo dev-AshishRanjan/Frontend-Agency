@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Discovery"
+  short_description: "Clarify audience, offer, brand, and constraints"
+  default_prompt: "Use $brand-discovery to turn a website brief into brand and product discovery."

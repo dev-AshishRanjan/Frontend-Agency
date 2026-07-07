@@ -1,0 +1,4 @@
+interface:
+  display_name: "Creative Direction"
+  short_description: "Define distinctive page concepts and art direction"
+  default_prompt: "Use $creative-direction to propose a distinct creative direction before design or code."

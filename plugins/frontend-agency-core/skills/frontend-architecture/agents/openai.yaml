@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Architecture"
+  short_description: "Plan scalable React and Next.js implementation"
+  default_prompt: "Use $frontend-architecture to plan a production frontend implementation."

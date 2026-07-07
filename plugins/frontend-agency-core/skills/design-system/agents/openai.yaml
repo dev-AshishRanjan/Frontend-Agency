@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System"
+  short_description: "Translate direction into tokens and component rules"
+  default_prompt: "Use $design-system to create production-ready tokens and component guidance."

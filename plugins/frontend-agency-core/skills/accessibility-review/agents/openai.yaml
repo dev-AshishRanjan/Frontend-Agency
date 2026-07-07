@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accessibility Review"
+  short_description: "Audit semantics, keyboard flow, labels, and contrast"
+  default_prompt: "Use $accessibility-review to audit a frontend for accessibility issues."

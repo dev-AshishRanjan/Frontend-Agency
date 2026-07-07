@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance SEO Review"
+  short_description: "Audit web performance, metadata, and crawlability"
+  default_prompt: "Use $performance-seo-review to review performance and SEO readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Design"
+  short_description: "Design purposeful motion and interaction systems"
+  default_prompt: "Use $motion-design to define polished motion and interaction behavior."

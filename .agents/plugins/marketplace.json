@@ -1,0 +1,20 @@
+{
+  "name": "frontend-agency",
+  "interface": {
+    "displayName": "Frontend Agency"
+  },
+  "plugins": [
+    {
+      "name": "frontend-agency-core",
+      "source": {
+        "source": "local",
+        "path": "./plugins/frontend-agency-core"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

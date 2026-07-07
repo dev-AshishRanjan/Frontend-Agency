@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Page Strategy"
+  short_description: "Plan page flow, messaging, and conversion structure"
+  default_prompt: "Use $landing-page-strategy to structure a high-converting landing page."

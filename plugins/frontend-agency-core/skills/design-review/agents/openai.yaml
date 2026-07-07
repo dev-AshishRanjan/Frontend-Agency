@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Review"
+  short_description: "Score and critique work against agency standards"
+  default_prompt: "Use $design-review to run a final agency-grade design critique."

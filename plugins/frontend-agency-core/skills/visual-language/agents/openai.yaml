@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Language"
+  short_description: "Create typography, color, layout, and imagery rules"
+  default_prompt: "Use $visual-language to define an implementation-ready visual language."

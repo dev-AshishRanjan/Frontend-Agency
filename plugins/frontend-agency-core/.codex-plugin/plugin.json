@@ -1,0 +1,36 @@
+{
+  "name": "frontend-agency-core",
+  "version": "0.1.0",
+  "description": "Professional frontend strategy, design, implementation, and review skills for AI agents.",
+  "author": {
+    "name": "Frontend Agency"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "agent-skills",
+    "frontend",
+    "design-systems",
+    "accessibility",
+    "performance",
+    "seo"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Frontend Agency Core",
+    "shortDescription": "Agency-grade frontend strategy, design, and review.",
+    "longDescription": "Frontend Agency Core provides modular Agent Skills for brand discovery, creative direction, visual systems, production frontend architecture, motion design, accessibility, performance, SEO, visual QA, and final design review.",
+    "developerName": "Frontend Agency",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills",
+      "Planning",
+      "Review"
+    ],
+    "defaultPrompt": [
+      "Use Frontend Agency to plan a premium landing page.",
+      "Review this frontend with Frontend Agency standards.",
+      "Create a brand-led visual direction before coding."
+    ],
+    "brandColor": "#14532D"
+  }
+}

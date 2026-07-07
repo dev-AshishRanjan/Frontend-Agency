@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual QA"
+  short_description: "Check responsive polish, spacing, and layout defects"
+  default_prompt: "Use $visual-qa to inspect screenshots and catch visual quality issues."
