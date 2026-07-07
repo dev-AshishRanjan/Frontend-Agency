@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
 const requiredSkills = [
@@ -106,6 +107,30 @@ for (const skill of requiredSkills) {
   assert(content.includes("## Workflow"), `${skill}: missing Workflow section`);
   assert(content.includes("## Output"), `${skill}: missing Output section`);
   assert(content.includes("## References"), `${skill}: missing References section`);
+}
+
+// Ensure adapters compile cleanly as part of repository validation
+console.log("Compiling adapters...");
+const compileResult = spawnSync(process.execPath, ["scripts/compile-adapters.mjs"], {
+  cwd: root,
+  stdio: "inherit",
+  shell: false
+});
+assert(compileResult.status === 0, "Adapter compilation script failed");
+
+// Assert all compiled files exist
+const requiredAdapters = [
+  "dist/adapters/cursorrules.json",
+  "dist/adapters/openai-tools.json",
+  "dist/adapters/copilot-instructions.md",
+  "dist/adapters/.cursorrules"
+];
+for (const adapterPath of requiredAdapters) {
+  assert(fs.existsSync(path.join(root, adapterPath)), `${adapterPath} is missing`);
+}
+for (const skill of requiredSkills) {
+  const compiledSkillPath = `dist/adapters/skills/${skill}.md`;
+  assert(fs.existsSync(path.join(root, compiledSkillPath)), `${compiledSkillPath} is missing`);
 }
 
 const textFiles = walkFiles(root).filter((filePath) =>

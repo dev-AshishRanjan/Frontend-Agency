@@ -14,3 +14,7 @@
 - Distribution, release, and skill-authoring documentation.
 - Skill playbook references.
 - Plugin packaging workflow with integrity manifest.
+- Standalone multi-platform adapter assets for Cursor (.cursorrules), GitHub Copilot, and OpenAI Assistants API.
+- Automated adapter compiler script (`scripts/compile-adapters.mjs`).
+- Comprehensive compatibility guide and programmatic integration runtime blueprint.
+- Integrated adapter build safety checks into repository validation and pre-release pipelines.

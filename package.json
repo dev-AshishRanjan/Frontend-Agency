@@ -8,7 +8,8 @@
     "validate": "node scripts/validate-repo.mjs",
     "eval:skills": "node scripts/run-skill-evals.mjs",
     "package:plugin": "node scripts/package-plugin.mjs",
-    "release:check": "node scripts/release-check.mjs"
+    "release:check": "node scripts/release-check.mjs",
+    "compile:adapters": "node scripts/compile-adapters.mjs"
   },
   "keywords": [
     "agent-skills",

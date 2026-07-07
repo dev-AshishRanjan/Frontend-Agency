@@ -43,7 +43,13 @@ Use this policy until a team decides to install the plugin by default.
 
 The canonical skill source is the skill directory itself. Agents that support the Agent Skills structure can consume each folder under `plugins/frontend-agency-core/skills`.
 
-Claude-specific marketplace metadata must stay outside individual skill instructions so the skills remain portable.
+To support environments that do not dynamically load files or resolve relative links (e.g. Cursor, GitHub Copilot, custom LLM APIs), compile the standalone adapter assets:
+
+```bash
+npm run compile:adapters
+```
+
+The compiled assets are generated under `dist/adapters/`. Claude-specific marketplace metadata must stay outside individual skill instructions so the skills remain portable.
 
 ## Versioning
 

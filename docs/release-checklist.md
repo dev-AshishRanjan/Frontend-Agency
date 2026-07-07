@@ -3,7 +3,8 @@
 ## Pre-Release
 
 - Confirm all intended changes are committed by phase.
-- Run `npm run validate`.
+- Run `npm run compile:adapters` to generate multi-platform compatibility assets.
+- Run `npm run validate` (which automatically tests adapter build safety).
 - Run `npm run eval:skills`.
 - Run `npm run package:plugin`.
 - Run `npm run release:check`.
